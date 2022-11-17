@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    cursor: pointer;
+}
+
+.box {
+    color:rgb(245, 131, 211);
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(245, 131, 211);
+}
+
+.right-border {
+    border-right: 0.2em solid rgb(111, 202, 170);
+}
+
+.bottom-border {
+    border-bottom: 0.2em solid rgb(111, 202, 170);
+}
