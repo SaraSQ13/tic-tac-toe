@@ -71,9 +71,9 @@ function checkWinner() {
 }
 
 function gameOverScreen(winnerText){
-    let text = '¡Empate!'
+    let text = '¡EMPATE!'
     if(winnerText != null){
-        text = `¡Ha ganado ${winnerText}!`;
+        text = `¡GANA ${winnerText}!`;
     }
     gameOverDiv.className= "visible";
     gameOverText.innerText = text;

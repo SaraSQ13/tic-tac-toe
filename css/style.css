@@ -3,7 +3,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    background-image: url(/assets/fondo2.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+   
+    
+   
+    
 }
 
 h1 {
@@ -20,7 +26,7 @@ h1 {
 }
 
 .box {
-    color:rgb(245, 131, 211);
+    color:rgba(245, 131, 211);
     font-size: 2em;
     display: flex;
     justify-content: center;
@@ -28,11 +34,11 @@ h1 {
 }
 
 .right-border {
-    border-right: 0.2em solid rgb(111, 202, 170);
+    border-right: 0.2em solid rgba(111, 202, 170);
 }
 
 .bottom-border {
-    border-bottom: 0.2em solid rgb(111, 202, 170);
+    border-bottom: 0.2em solid rgba(111, 202, 170);
 }
 
 /* Winner lines */
@@ -92,25 +98,22 @@ h1 {
 /* Screen winner & play again */
 
 #game-over-div{
+    height: 200px;
+    width: 300px;
     text-align: center;
-    border:rgb(111, 202, 170) 8px solid;
-    padding: 50px;
-    width: 50%;
-    margin-top: 50px; 
+    border:rgba(111, 202, 170) 10px solid;
+    border-radius: 10px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
 }
 
 h2{
-    color:rgb(245, 131, 211);
+    color:rgba(245, 131, 211);
     font-size: 2em;
     margin-top:0px;
-}
-
-button {
-    background-color: transparent;
-    color:rgb(245, 131, 211);
-    border:rgb(245, 131, 211) 1px solid;
-    padding: 10px;
-    font-size: 1.5em;
 }
 
 .hidden {
@@ -123,9 +126,9 @@ button {
 
 #play-again{
     
-      color: #fff;
+      color: black;
       padding: 15px 25px;
-      background-color:rgb(111, 202, 170);
+      background-color:rgba(111, 202, 170);
       background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
       box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
       border-radius: 14px;
@@ -140,4 +143,40 @@ button {
     
       cursor: pointer;
     
+}
+
+/* BREAKPOINTS */
+
+@media screen and (min-width: 576px){
+    #game-over-div{
+        width: 34vw;   
+    } 
+    body{
+        background-size: cover;
+    }
+
+}
+
+@media screen and (min-width: 767px){
+    #game-over-div{
+        width: 34vw;   
+    } 
+    body{
+        background-size: cover;
+    }
+
+}
+
+@media screen and (min-width: 992px){
+
+    #game-over-div{
+        width: 25vw;
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+    #game-over-div{
+        width: 22vw;
+    }
 }
