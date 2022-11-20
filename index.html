@@ -9,10 +9,14 @@
   </head>
   <body>
     <div class="container">
-      <div class=" description">Descripcion del juego</div>
-      <div>
-        Tablero
-        <h1>· · · 三 目 並 べ · · ·</h1>
+        <div class=" description">
+            <h2> Descripción</h2>
+            <hr>
+            <h3>Juego para dos personas en que en un tablero de 3 x3 gana el primero que consiga hacer línea ya sea vertical, horizontal o diagonal.</h3>
+        </div>
+        <div>
+            Tablero
+            <h1>· · · 三 目 並 べ · · ·</h1>
         <div id="board">
           <div data-index="1" class="box right-border bottom-border"></div>
           <div data-index="2" class="box right-border bottom-border"></div>
@@ -26,13 +30,13 @@
           <div id="strike" class="strike"></div>
         </div>
       </div>
-      <div class="players">Jugadores</div>
+      <div id="game-over-div" class="hidden">
+        <h2 id="game-over-text"></h2>
+        <button id="play-again">¡JUEGA DE NUEVO!</button>
+      </div>
     </div>
 
-    <div id="game-over-div" class="hidden">
-      <h2 id="game-over-text"></h2>
-      <button id="play-again">¡JUEGA DE NUEVO!</button>
-    </div>
+    
     <script src="js/main.js"></script>
   </body>
 </html>
