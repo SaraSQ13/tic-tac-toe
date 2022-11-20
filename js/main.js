@@ -1,19 +1,3 @@
-// //intro
-// let inicio = document.querySelector('.inicio');
-// let intro = document.querySelector('.intro');
-// let message = document.querySelectorAll('.logo');
-
-// window.addEventListener('DOMContentLoaded', ()=>{
-//     setTimeout(()=>{
-//         message.forEach((span,idx)=>{
-//                 setTimeout(()=>{
-//                     span.classList.add('active');
-//     }, (idx +1 ) * 400)
-//         });
-
-//     })
-
-// })
 
 //GAME
 
