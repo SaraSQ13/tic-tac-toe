@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <h1>三 目 並 べ </h1>
-    <div id="board">
-        <div data-index="1" class="box right-border bottom-border"></div>
-        <div data-index="2" class="box right-border bottom-border"></div>
-        <div data-index="3" class="box bottom-border"></div>
-        <div data-index="4" class="box right-border bottom-border"></div>
-        <div data-index="5" class="box right-border bottom-border"></div>
-        <div data-index="6" class="box bottom-border"></div>
-        <div data-index="7" class="box right-border"></div>
-        <div data-index="8" class="box right-border"></div>
-        <div data-index="9" class="box"></div>
-        <div id="strike" class="strike"></div>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class=" description">Descripcion del juego</div>
+      <div>
+        Tablero
+        <h1>· · · 三 目 並 べ · · ·</h1>
+        <div id="board">
+          <div data-index="1" class="box right-border bottom-border"></div>
+          <div data-index="2" class="box right-border bottom-border"></div>
+          <div data-index="3" class="box bottom-border"></div>
+          <div data-index="4" class="box right-border bottom-border"></div>
+          <div data-index="5" class="box right-border bottom-border"></div>
+          <div data-index="6" class="box bottom-border"></div>
+          <div data-index="7" class="box right-border"></div>
+          <div data-index="8" class="box right-border"></div>
+          <div data-index="9" class="box"></div>
+          <div id="strike" class="strike"></div>
+        </div>
+      </div>
+      <div class="players">Jugadores</div>
     </div>
+
     <div id="game-over-div" class="hidden">
-        <h2 id="game-over-text"></h2>
-        <button id="play-again">¡JUEGA DE NUEVO!</button>
+      <h2 id="game-over-text"></h2>
+      <button id="play-again">¡JUEGA DE NUEVO!</button>
     </div>
-
-
-
-
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
