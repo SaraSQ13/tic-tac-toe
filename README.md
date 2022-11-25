@@ -24,6 +24,10 @@
 
 First project like student of Full Stack Developer in GeeksHubs Academy using JavaScript.
 
+![inicio](./assets/inicio.png)
+![juego](./assets/juego.png)
+![ganador](./assets/ganador.png)
+
 ## 🎈 Usage <a name="usage"></a>
 
 Open your favourite browser, link this url: https://sarasq13.github.io/tic-tac-toe/  and start the game!
