@@ -1,4 +1,7 @@
 
+
+
+
 //GAME
 
 //Var
@@ -6,6 +9,10 @@ const boxes = document.querySelectorAll(".box");
 const playerX = "🎐";
 const playerO = "🌸";
 let turn = playerX;
+const players = document.querySelectorAll(".player");
+let nameJ1= ""
+let nameJ2= ""
+
 
 const boardState = Array(boxes.length);
 boardState.fill(null);
@@ -15,8 +22,23 @@ boardState.fill(null);
 const strike = document.getElementById("strike");
 const gameOverDiv = document.getElementById("game-over-div");
 const gameOverText = document.getElementById("game-over-text");
+const winnerScreen = document.getElementById("winner-screen");
 const playAgain = document.getElementById("play-again");
 playAgain.addEventListener("click", startNewGame);
+const iptName1= document.getElementById("player1")
+const iptName2= document.getElementById("player2")
+iptName1.addEventListener("keyup",()=> {
+  nameJ1 = iptName1.value
+  console.log(nameJ1)
+})
+iptName2.addEventListener("keyup",()=> {
+  nameJ2 = iptName2.value
+  console.log(nameJ2)
+})
+
+
+
+
 
 // Click on board
 
@@ -34,13 +56,13 @@ function boxClick(event) {
   }
 
   if (turn === playerX) {
-    let text = "Turno 🌸";
+    let text = `Turno de ${nameJ1} `;
     box.innerText = playerX;
     boardState[boxNumber - 1] = playerX;
     turn = playerO;
     gameOverText.innerText = text;
   } else {
-    let text = "Turno 🎐";
+    let text = `Turno de ${nameJ2} `;
     box.innerText = playerO;
     boardState[boxNumber - 1] = playerO;
     turn = playerX;
@@ -82,20 +104,30 @@ function checkWinner() {
 
 function gameOverScreen(winnerText) {
   let text = "¡EMPATE!";
-  if (winnerText != null) {
-    text = `¡GANA ${winnerText}!`;
+  if (winnerText != null && turn == playerX) {
+    document.getElementById("info-winner").innerHTML = `¡GANA ${nameJ1}!`;
+    document.getElementsByClassName("winner-screen")[0].style.display = "flex";
+  }else if (winnerText != null && turn == playerO){
+    document.getElementById("info-winner").innerHTML = `¡GANA ${nameJ2}!`;
+    document.getElementsByClassName("winner-screen")[0].style.display = "flex";
+  }else{
+    document.getElementById("info-winner").innerHTML = `¡EMPATE!`;
+    document.getElementsByClassName("winner-screen")[0].style.display = "flex";
   }
-  gameOverDiv.className = "visible";
+  winnerScreen.className = "visible";
   gameOverText.innerText = text;
 }
 
 // Start new game
 function startNewGame() {
-  strike.className = "strike";
-  gameOverDiv.ClassName = "hidden";
-  boardState.fill(null);
-  boxes.forEach((box) => (box.innerText = ""));
-  turn = playerX;
+  // strike.className = "strike";
+  // gameOverDiv.ClassName = "hidden";
+  // boardState.fill(null);
+  // boxes.forEach((box) => (box.innerText = ""));
+  // turn = playerX;
+  // players.forEach((player) => (player.innerText = ""));
+  // return;
+  location.reload();
 }
 
 // array win positions

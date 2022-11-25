@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+        <div class=" description">
+            <h2> Descripción</h2>
+            <hr>
+            <h3>Juego para dos personas en que en un tablero de 3 x3 gana el primero que consiga hacer línea ya sea vertical, horizontal o diagonal.</h3>
+        </div>
+        <div>
+            Tablero
+            <h1>· · · 三 目 並 べ · · ·</h1>
+        <div id="board">
+          <div data-index="1" class="box right-border bottom-border"></div>
+          <div data-index="2" class="box right-border bottom-border"></div>
+          <div data-index="3" class="box bottom-border"></div>
+          <div data-index="4" class="box right-border bottom-border"></div>
+          <div data-index="5" class="box right-border bottom-border"></div>
+          <div data-index="6" class="box bottom-border"></div>
+          <div data-index="7" class="box right-border"></div>
+          <div data-index="8" class="box right-border"></div>
+          <div data-index="9" class="box"></div>
+          <div id="strike" class="strike"></div>
+        </div>
+      </div>
+      <div id="game-over-div" class="hidden">
+        <h2 id="game-over-text"></h2>
+        <div class="players">
+          <label>
+            JUGADOR🎐
+            <input class="player" id="player2" type="text" />
+          </label>
+          <br>
+          <label >
+            JUGADOR🌸 
+            <input class="player" id="player1" type="text" />
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="winner-screen">
+      <span id="info-winner"></span>
+      <button id="play-again">¡JUEGA DE NUEVO!</button>
+      <br>
+      <button id="play-again">
+       <a class="text-button" href="./index.html">Vuelve a inicio</a> 
+      </button>
+    </div>
+    
+    <script src="js/main.js"></script>
+  </body>
+</html>
